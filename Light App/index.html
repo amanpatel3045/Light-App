@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light App</title>
+</head>
+<body style="background-color: black;">
+    <img id="imgID" style="height:400px;" src="light.jpg" alt="bulb"/>
+    <br/>
+    <br/>
+    <button id="toggleBTN" style="margin-left: 70px;">TURN ON</button>
+
+    
+<script>
+
+let btn=document.getElementById("toggleBTN");
+let bulb=document.getElementById("imgID");
+btn.addEventListener('click',fun);
+
+function fun(e){
+console.log(e);
+if(btn.textContent.includes("TURN ON")){
+    bulb.src="onLight.jpg"
+   
+    btn.textContent="TURN OFF"
+}else{
+    bulb.src="light.jpg"
+    btn.textContent="TURN ON"
+}
+
+}
+
+
+
+</script>
+
+
+</body>
+</html>
